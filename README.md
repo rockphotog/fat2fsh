@@ -1,6 +1,6 @@
 # fat2fsh
 
-A Python command line tool to download code systems from the FAT API (https://fat.kote.helsedirektoratet.no) and convert them to FHIR CodeSystem with FHIR Shorthand (FSH) notation.
+A Python command line tool to download code systems from the FAT API (<https://fat.kote.helsedirektoratet.no>) and convert them to FHIR CodeSystem with FHIR Shorthand (FSH) notation.
 
 ## Features
 
@@ -10,44 +10,41 @@ A Python command line tool to download code systems from the FAT API (https://fa
 - Support for multiple code systems in a single run
 - Save raw JSON data and generated FSH files
 - Verbose output option
+- Simple setup - no virtual environments required
 
 ## Setup
 
-1. Run the setup script to create a virtual environment and install dependencies:
-   ```bash
-   ./setup.sh
-   ```
+Install dependencies directly to your system Python:
 
-2. Activate the virtual environment:
-   ```bash
-   source venv/bin/activate
-   ```
+```bash
+./setup.sh
+```
 
 ## Usage
 
 Basic usage:
 ```bash
-python fat2fsh.py -c <code-system-id>
+python3 fat2fsh.py -c <code-system-id>
 ```
 
 Download multiple code systems:
 ```bash
-python fat2fsh.py -c system1 -c system2 -c system3
+python3 fat2fsh.py -c system1 -c system2 -c system3
 ```
 
 With verbose output:
 ```bash
-python fat2fsh.py -c system1 -c system2 --verbose
+python3 fat2fsh.py -c system1 -c system2 --verbose
 ```
 
 Specify output directory:
 ```bash
-python fat2fsh.py -c system1 --output-dir /path/to/output
+python3 fat2fsh.py -c system1 --output-dir /path/to/output
 ```
 
 Get help:
 ```bash
-python fat2fsh.py --help
+python3 fat2fsh.py --help
 ```
 
 ## Output
@@ -60,7 +57,7 @@ The tool creates two directories:
 
 ```bash
 # Download and convert a code system
-python fat2fsh.py -c example-system -v
+python3 fat2fsh.py -c example-system -v
 
 # Output:
 # ✓ Successfully processed example-system

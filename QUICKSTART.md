@@ -13,17 +13,11 @@ cd fat2fsh
 ## 2. Daily Usage
 
 ```bash
-# Activate the virtual environment
-source venv/bin/activate
-
 # Run the converter with one or more code system IDs
-python fat2fsh.py -c <code-system-id> --verbose
+python3 fat2fsh.py -c <code-system-id> --verbose
 
 # Example with multiple systems
-python fat2fsh.py -c system1 -c system2 -c system3 -v
-
-# When done, deactivate the virtual environment
-deactivate
+python3 fat2fsh.py -c system1 -c system2 -c system3 -v
 ```
 
 ## 3. Finding Code System IDs
@@ -37,11 +31,8 @@ To find available code system IDs, you need to:
 ## 4. Example Workflow
 
 ```bash
-# Activate environment
-source venv/bin/activate
-
 # Download and convert a code system
-python fat2fsh.py -c example-system -v
+python3 fat2fsh.py -c example-system -v
 
 # Check the results
 ls fat/        # Raw JSON files
@@ -80,14 +71,14 @@ fat2fsh/
 
 ### Python Environment Issues
 - Re-run the setup script: `./setup.sh`
-- Manually activate the virtual environment: `source venv/bin/activate`
+- Test the installation: `python3 test_setup.py`
 
 ## 7. Getting Help
 
 ```bash
 # Show command line help
-python fat2fsh.py --help
+python3 fat2fsh.py --help
 
 # Test the setup
-python test_setup.py
+python3 test_setup.py
 ```

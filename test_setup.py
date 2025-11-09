@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Test script to verify the fat2fsh setup and basic functionality.
+Test script to verify the fat2fsh setup.
 """
 
 import sys
@@ -14,9 +14,13 @@ def test_imports():
         import click
         import pydantic
         print("✓ All required modules imported successfully")
+        print(f"  - requests: {requests.__version__}")
+        print(f"  - click: {click.__version__}")
+        print(f"  - pydantic: {pydantic.__version__}")
         return True
     except ImportError as e:
         print(f"✗ Import error: {e}")
+        print("Run './setup_direct.sh' to install dependencies")
         return False
 
 def test_api_connection():
@@ -24,7 +28,6 @@ def test_api_connection():
     try:
         import requests
         
-        # Test basic connectivity to the FAT API
         url = "https://fat.kote.helsedirektoratet.no"
         response = requests.get(url, timeout=10)
         
@@ -46,11 +49,9 @@ def test_directories():
         fat_dir = test_dir / "fat"
         fsh_dir = test_dir / "fsh"
         
-        # Create directories
         fat_dir.mkdir(parents=True, exist_ok=True)
         fsh_dir.mkdir(parents=True, exist_ok=True)
         
-        # Test writing files
         test_file = fat_dir / "test.json"
         with open(test_file, 'w') as f:
             json.dump({"test": "data"}, f)
@@ -71,6 +72,8 @@ def test_directories():
 def main():
     """Run all tests."""
     print("Testing fat2fsh setup...\n")
+    print(f"Python version: {sys.version}")
+    print(f"Python executable: {sys.executable}\n")
     
     tests = [
         ("Import test", test_imports),
@@ -93,9 +96,11 @@ def main():
         print("🎉 All tests passed! The setup is working correctly.")
         print("\nNext steps:")
         print("1. Find valid code system IDs from the FAT API documentation")
-        print("2. Run: python fat2fsh.py -c <code-system-id> -v")
+        print("2. Run: python3 fat2fsh.py -c <code-system-id> -v")
     else:
         print("❌ Some tests failed. Please check the setup.")
+        if passed < total and tests[0][1] == test_imports:
+            print("\nTo install dependencies, run: ./setup.sh")
         sys.exit(1)
 
 if __name__ == "__main__":

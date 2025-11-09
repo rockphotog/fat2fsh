@@ -2,7 +2,7 @@
 # Replace these with actual code system IDs from the FAT API
 
 # Example usage:
-# python fat2fsh.py -c kodeverk1 -c kodeverk2 -v
+# python3 fat2fsh.py -c kodeverk1 -c kodeverk2 -v
 
 # You can find available code systems by exploring the FAT API documentation at:
 # https://fat.kote.helsedirektoratet.no/index.html
@@ -14,4 +14,4 @@
 # - Medication codes
 
 # Example command with multiple systems:
-# python fat2fsh.py -c system1 -c system2 --output-dir ./output --verbose
+# python3 fat2fsh.py -c system1 -c system2 --output-dir ./output --verbose
