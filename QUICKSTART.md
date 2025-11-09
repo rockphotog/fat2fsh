@@ -82,3 +82,31 @@ python3 fat2fsh.py --help
 # Test the setup
 python3 test_setup.py
 ```
+
+## 8. Optional: Generate FHIR JSON with SUSHI
+
+If you want to convert the generated FSH files to complete FHIR JSON resources, you can use [SUSHI](https://fshschool.org/docs/sushi/):
+
+```bash
+# Install SUSHI (if not already installed)
+npm install -g fsh-sushi
+
+# Create a SUSHI project and copy FSH files
+mkdir my-fhir-project
+cd my-fhir-project
+sushi init
+
+# Copy your generated FSH files to input/fsh/
+cp ../fsh/*.fsh input/fsh/
+
+# Generate FHIR JSON resources
+sushi .
+```
+
+The generated FHIR CodeSystem resources will be available in `fsh-generated/resources/`.
+
+**Resources:**
+
+- [SUSHI Documentation](https://fshschool.org/docs/sushi/)
+- [FSH School](https://fshschool.org/)
+- [FHIR Shorthand Documentation](https://hl7.org/fhir/uv/shorthand/)
