@@ -29,6 +29,11 @@ class FATCodeSystem(BaseModel):
     title: str
     description: Optional[str] = None
     version: Optional[str] = None
+    status: Optional[str] = None
+    status_last_changed: Optional[str] = None
+    owner: Optional[str] = None
+    valid_from: Optional[str] = None
+    active: Optional[bool] = None
     concepts: List[CodeSystemConcept] = Field(default_factory=list)
 
 
@@ -43,14 +48,22 @@ class FATAPIClient:
             'Accept': 'application/json'
         })
     
-    def get_code_system(self, code_system_id: str) -> FATCodeSystem:
+    def get_code_system(self, code_system_id: str, include_inactive: bool = False) -> FATCodeSystem:
         """Download a code system from the FAT API."""
         url = f"{self.base_url}/api/code-systems/adm/codelist/{code_system_id}"
         
+        # Add query parameters
+        params = {
+            'includeInactive': str(include_inactive).lower()
+        }
+        
         try:
-            response = self.session.get(url)
+            response = self.session.get(url, params=params)
             response.raise_for_status()
             data = response.json()
+            
+            if not data:
+                raise ValueError(f"Empty response from API for code system {code_system_id}")
             
             # Parse the response and create FATCodeSystem object
             code_system = FATCodeSystem(
@@ -58,12 +71,25 @@ class FATAPIClient:
                 name=data.get('name', code_system_id),
                 title=data.get('title', data.get('name', code_system_id)),
                 description=data.get('description'),
-                version=data.get('version', '1.0.0')
+                version=data.get('version', '1.0.0'),
+                status=data.get('status'),
+                status_last_changed=data.get('statusLastChanged'),
+                owner=data.get('owner', {}).get('name') if data.get('owner') else None,
+                valid_from=data.get('validFrom'),
+                active=data.get('active')
             )
             
             # Parse concepts/codes
             concepts = []
-            if 'codes' in data:
+            if 'codeValues' in data:
+                for code_data in data['codeValues']:
+                    concept = CodeSystemConcept(
+                        code=code_data.get('value', code_data.get('id', '')),
+                        display=code_data.get('name', ''),
+                        definition=code_data.get('description', '')
+                    )
+                    concepts.append(concept)
+            elif 'codes' in data:
                 for code_data in data['codes']:
                     concept = CodeSystemConcept(
                         code=code_data.get('code', ''),
@@ -96,29 +122,50 @@ class FSHGenerator:
     
     @staticmethod
     def generate_fsh(code_system: FATCodeSystem) -> str:
-        """Generate FSH notation for a code system."""
+        """Generate FSH notation for a code system in Norwegian standard format."""
         fsh_content = []
         
-        # CodeSystem header
-        fsh_content.append(f"CodeSystem: {code_system.id}")
-        fsh_content.append(f"Id: {code_system.id}")
-        fsh_content.append(f"Title: \"{code_system.title}\"")
+        # CodeSystem header following Norwegian conventions
+        code_system_name = f"NoKodeverk{code_system.id}"
+        code_system_id = f"no-kodeverk-{code_system.id}.codesystem"
+        
+        fsh_content.append(f"CodeSystem: {code_system_name}")
+        fsh_content.append(f"Id: {code_system_id}")
+        fsh_content.append(f"Title: \"{code_system.id} {code_system.title}\"")
         
         if code_system.description:
             fsh_content.append(f"Description: \"{code_system.description}\"")
         
-        fsh_content.append(f"* ^version = \"{code_system.version}\"")
+        # Add canonical URL
+        canonical_url = f"http://helsedir.no/fhir/CodeSystem/no-kodeverk-{code_system.id}"
+        fsh_content.append(f"* ^url = \"{canonical_url}\"")
+        
+        # Add identifier with OID
+        fsh_content.append("* ^identifier.system = \"urn:ietf:rfc:3986\"")
+        oid = f"urn:oid:2.16.578.1.12.4.1.1.{code_system.id}"
+        fsh_content.append(f"* ^identifier.value = \"{oid}\"")
+        
+        # Status and dates
         fsh_content.append("* ^status = #active")
-        fsh_content.append("* ^experimental = false")
-        fsh_content.append("* ^caseSensitive = true")
+        
+        # Add date from statusLastChanged if available
+        if code_system.status_last_changed:
+            # Extract date part from ISO datetime
+            date_part = code_system.status_last_changed.split('T')[0]
+            fsh_content.append(f"* ^date = \"{date_part}\"")
+        
+        # Add publisher
+        if code_system.owner:
+            fsh_content.append(f"* ^publisher = \"{code_system.owner}\"")
+        
         fsh_content.append("* ^content = #complete")
         fsh_content.append("")
         
-        # Add concepts
+        # Add concepts (only active ones by default)
         for concept in code_system.concepts:
             if concept.code and concept.display:
                 fsh_content.append(f"* #{concept.code} \"{concept.display}\"")
-                if concept.definition:
+                if concept.definition and concept.definition.strip():
                     fsh_content.append(f"  * ^definition = \"{concept.definition}\"")
         
         return "\n".join(fsh_content)
@@ -141,7 +188,13 @@ class FSHGenerator:
     is_flag=True,
     help='Enable verbose output'
 )
-def main(code_systems: tuple, output_dir: str, verbose: bool):
+@click.option(
+    '--include-inactive',
+    is_flag=True,
+    default=False,
+    help='Include inactive codes in the download'
+)
+def main(code_systems: tuple, output_dir: str, verbose: bool, include_inactive: bool):
     """
     Download code systems from the FAT API and convert them to FHIR CodeSystem with FSH notation.
     
@@ -174,7 +227,7 @@ def main(code_systems: tuple, output_dir: str, verbose: bool):
         
         try:
             # Download code system from FAT API
-            code_system = api_client.get_code_system(code_system_id)
+            code_system = api_client.get_code_system(code_system_id, include_inactive)
             
             # Save raw JSON data
             fat_file = fat_dir / f"{code_system_id}.json"
