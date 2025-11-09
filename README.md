@@ -16,6 +16,12 @@ A Python command line tool to download code systems from the FAT API (<https://f
 - Simple setup - no virtual environments required
 - Automatic metadata extraction (publisher, dates, OID identifiers)
 
+## Current Scope
+
+**Currently supports:** FAT API "adm" endpoint only - "Kodeverk i standarder" (Code systems in standards)
+
+**Future plans:** Support for additional FAT API endpoints and code system categories will be added in upcoming releases.
+
 ## Setup
 
 Install dependencies directly to your system Python:
@@ -90,10 +96,14 @@ Generated FSH follows Norwegian conventions:
 
 ## API Endpoint
 
-The tool uses the FAT API endpoint:
-```
+The tool currently uses the FAT API "adm" endpoint for "Kodeverk i standarder":
+
+```text
 https://fat.kote.helsedirektoratet.no/api/code-systems/adm/codelist/{id}
 ```
 
 With optional query parameters:
+
 - `includeInactive=false` - Controls whether inactive codes are included (use `--include-inactive` flag)
+
+**Note:** This tool currently only supports the "adm" category. Support for additional FAT API endpoints and code system categories is planned for future releases.

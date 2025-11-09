@@ -4,6 +4,9 @@ fat2fsh - Convert FAT API code systems to FHIR FSH notation.
 
 A command-line tool to download Norwegian code systems from the FAT API
 and convert them to FHIR Shorthand (FSH) notation following Norwegian standards.
+
+Currently supports the FAT API "adm" endpoint ("Kodeverk i standarder").
+Support for additional code system categories will be added in future releases.
 """
 
 import json
@@ -210,6 +213,8 @@ class FSHGenerator:
 def main(code_systems: tuple, output_dir: str, verbose: bool, include_inactive: bool):
     """
     Download code systems from the FAT API and convert them to FHIR CodeSystem with FSH notation.
+    
+    Currently supports the FAT API "adm" endpoint ("Kodeverk i standarder") only.
     
     Example usage:
     

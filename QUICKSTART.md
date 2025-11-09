@@ -28,6 +28,8 @@ To find available code system IDs, you need to:
 2. Look for the `/api/code-systems/adm/codelist/` endpoint
 3. Find the available code system IDs from the API documentation or by exploring the API
 
+**Note:** This tool currently only supports the "adm" endpoint ("Kodeverk i standarder"). Support for additional code system categories will be added in future releases.
+
 ## 4. Example Workflow
 
 ```bash
