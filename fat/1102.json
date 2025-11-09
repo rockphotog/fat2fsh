@@ -1,0 +1,29 @@
+{
+  "id": "1102",
+  "name": "Ja, nei, vet ikke",
+  "title": "Ja, nei, vet ikke",
+  "description": "Dette kodeverket inneholder koder for å angi svar Ja eller Nei og i tillegg beskrive tilfeller av usikre svar.",
+  "version": "1.0.0",
+  "status": "Til anbefaling",
+  "status_last_changed": "2020-12-04T11:05:25.0000000",
+  "owner": "Helsedirektoratet",
+  "valid_from": "2004-07-05T00:00:00.000",
+  "active": true,
+  "concepts": [
+    {
+      "code": "1",
+      "display": "Ja",
+      "definition": ""
+    },
+    {
+      "code": "2",
+      "display": "Nei",
+      "definition": ""
+    },
+    {
+      "code": "9",
+      "display": "Vet ikke",
+      "definition": ""
+    }
+  ]
+}

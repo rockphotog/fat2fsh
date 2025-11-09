@@ -1,0 +1,29 @@
+{
+  "id": "1103",
+  "name": "Ja, nei, ukjent",
+  "title": "Ja, nei, ukjent",
+  "description": "Dette kodeverket inneholder koder for å angi svar Ja eller Nei og i tillegg beskrive om svaret er ukjent.",
+  "version": "1.0.0",
+  "status": "Til utbredelse eller er i bruk",
+  "status_last_changed": "2020-12-04T11:04:32.0000000",
+  "owner": "Helsedirektoratet",
+  "valid_from": "2006-01-13T00:00:00.000",
+  "active": true,
+  "concepts": [
+    {
+      "code": "1",
+      "display": "Ja",
+      "definition": ""
+    },
+    {
+      "code": "2",
+      "display": "Nei",
+      "definition": ""
+    },
+    {
+      "code": "9",
+      "display": "Ukjent",
+      "definition": ""
+    }
+  ]
+}

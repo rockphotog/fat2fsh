@@ -1,0 +1,24 @@
+{
+  "id": "1101",
+  "name": "Ja, nei",
+  "title": "Ja, nei",
+  "description": "Dette kodeverket inneholder koder for å angi svar Ja eller Nei.",
+  "version": "1.0.0",
+  "status": "Til utbredelse eller er i bruk",
+  "status_last_changed": "2020-12-04T11:04:13.0000000",
+  "owner": "Helsedirektoratet",
+  "valid_from": "2003-03-02T00:00:00.000",
+  "active": true,
+  "concepts": [
+    {
+      "code": "1",
+      "display": "Ja",
+      "definition": ""
+    },
+    {
+      "code": "2",
+      "display": "Nei",
+      "definition": ""
+    }
+  ]
+}
