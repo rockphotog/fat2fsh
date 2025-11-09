@@ -107,3 +107,25 @@ With optional query parameters:
 - `includeInactive=false` - Controls whether inactive codes are included (use `--include-inactive` flag)
 
 **Note:** This tool currently only supports the "adm" category. Support for additional FAT API endpoints and code system categories is planned for future releases.
+
+## GitHub Action
+
+You can also run fat2fsh using GitHub Actions without setting up a local environment:
+
+1. Go to the **Actions** tab in this repository
+2. Select **"Generate FSH from FAT API"**
+3. Click **"Run workflow"**
+4. Enter a code system ID (e.g., "1101")
+5. Optionally enable "Include inactive codes"
+6. Click **"Run workflow"**
+
+The action will:
+- Generate FSH files from the specified code system
+- Display the generated content in the workflow log
+- Provide downloadable artifacts containing both JSON and FSH files
+- Files are available for download for 30 days
+
+This is useful for:
+- Quick testing without local setup
+- Sharing generated FSH files with others
+- Validating code system conversions

@@ -1,0 +1,104 @@
+name: Generate FSH from FAT API
+
+on:
+  workflow_dispatch:
+    inputs:
+      code_system_id:
+        description: 'Code System ID to download and convert'
+        required: true
+        default: '1101'
+        type: string
+      include_inactive:
+        description: 'Include inactive codes'
+        required: false
+        default: false
+        type: boolean
+
+jobs:
+  generate-fsh:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        
+    - name: Generate FSH files
+      run: |
+        if [ "${{ inputs.include_inactive }}" = "true" ]; then
+          python3 fat2fsh.py -c "${{ inputs.code_system_id }}" --include-inactive -v
+        else
+          python3 fat2fsh.py -c "${{ inputs.code_system_id }}" -v
+        fi
+        
+    - name: Show generated files
+      run: |
+        echo "📁 Generated files structure:"
+        echo "================================"
+        find fat/ fsh/ -type f -name "*.json" -o -name "*.fsh" | sort
+        echo ""
+        echo "📄 FSH Content Preview:"
+        echo "================================"
+        for fsh_file in fsh/*.fsh; do
+          if [ -f "$fsh_file" ]; then
+            echo "--- $fsh_file ---"
+            head -n 20 "$fsh_file"
+            echo ""
+          fi
+        done
+        
+    - name: Create artifact structure
+      run: |
+        mkdir -p artifacts/fat artifacts/fsh
+        cp fat/*.json artifacts/fat/ 2>/dev/null || echo "No JSON files to copy"
+        cp fsh/*.fsh artifacts/fsh/ 2>/dev/null || echo "No FSH files to copy"
+        
+    - name: Upload FSH artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: fsh-files-${{ inputs.code_system_id }}
+        path: artifacts/
+        retention-days: 30
+        
+    - name: Summary
+      run: |
+        echo "## 🎉 FSH Generation Complete!" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "**Code System ID:** \`${{ inputs.code_system_id }}\`" >> $GITHUB_STEP_SUMMARY
+        echo "**Include Inactive:** \`${{ inputs.include_inactive }}\`" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "### 📁 Generated Files:" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "| Type | Files |" >> $GITHUB_STEP_SUMMARY
+        echo "|------|-------|" >> $GITHUB_STEP_SUMMARY
+        
+        json_count=$(find fat/ -name "*.json" 2>/dev/null | wc -l)
+        fsh_count=$(find fsh/ -name "*.fsh" 2>/dev/null | wc -l)
+        
+        echo "| FAT JSON | $json_count file(s) |" >> $GITHUB_STEP_SUMMARY
+        echo "| FSH | $fsh_count file(s) |" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "### 📥 Download" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "- Check the **Artifacts** section below to download the generated FSH files" >> $GITHUB_STEP_SUMMARY
+        echo "- Artifact name: \`fsh-files-${{ inputs.code_system_id }}\`" >> $GITHUB_STEP_SUMMARY
+        echo "- Files are available for 30 days" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "### 🔧 Manual Usage" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "\`\`\`bash" >> $GITHUB_STEP_SUMMARY
+        if [ "${{ inputs.include_inactive }}" = "true" ]; then
+          echo "python3 fat2fsh.py -c ${{ inputs.code_system_id }} --include-inactive -v" >> $GITHUB_STEP_SUMMARY
+        else
+          echo "python3 fat2fsh.py -c ${{ inputs.code_system_id }} -v" >> $GITHUB_STEP_SUMMARY
+        fi
+        echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
