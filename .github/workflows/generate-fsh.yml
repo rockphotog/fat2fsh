@@ -40,21 +40,39 @@ jobs:
           python3 fat2fsh.py -c "${{ inputs.code_system_id }}" -v
         fi
         
-    - name: Show generated files
+    - name: Display FSH output for easy copying
       run: |
-        echo "📁 Generated files structure:"
-        echo "================================"
-        find fat/ fsh/ -type f -name "*.json" -o -name "*.fsh" | sort
+        echo "🎯 Generated FSH for Code System: ${{ inputs.code_system_id }}"
+        echo "==============================================================="
         echo ""
-        echo "📄 FSH Content Preview:"
-        echo "================================"
-        for fsh_file in fsh/*.fsh; do
-          if [ -f "$fsh_file" ]; then
-            echo "--- $fsh_file ---"
-            head -n 20 "$fsh_file"
-            echo ""
-          fi
-        done
+        
+        # Find the specific FSH file
+        fsh_file="fsh/no-kodeverk-${{ inputs.code_system_id }}.fsh"
+        
+        if [ -f "$fsh_file" ]; then
+          echo "📄 Complete FSH Content (ready to copy):"
+          echo "========================================="
+          echo ""
+          echo "```fsh"
+          cat "$fsh_file"
+          echo "```"
+          echo ""
+          echo "📁 File location: $fsh_file"
+          echo "📊 File size: $(wc -l < "$fsh_file") lines"
+        else
+          echo "❌ FSH file not found: $fsh_file"
+          echo "📁 Available files:"
+          find . -name "*.fsh" -o -name "*.json" | sort
+        fi
+        
+        echo ""
+        echo "📋 Quick copy commands for local use:"
+        echo "======================================"
+        if [ "${{ inputs.include_inactive }}" = "true" ]; then
+          echo "python3 fat2fsh.py -c ${{ inputs.code_system_id }} --include-inactive -v"
+        else
+          echo "python3 fat2fsh.py -c ${{ inputs.code_system_id }} -v"
+        fi
         
     - name: Create artifact structure
       run: |
@@ -71,29 +89,41 @@ jobs:
         
     - name: Summary
       run: |
-        echo "## 🎉 FSH Generation Complete!" >> $GITHUB_STEP_SUMMARY
+        echo "## 🎉 FSH Generation Complete for Code System ${{ inputs.code_system_id }}!" >> $GITHUB_STEP_SUMMARY
         echo "" >> $GITHUB_STEP_SUMMARY
         echo "**Code System ID:** \`${{ inputs.code_system_id }}\`" >> $GITHUB_STEP_SUMMARY
         echo "**Include Inactive:** \`${{ inputs.include_inactive }}\`" >> $GITHUB_STEP_SUMMARY
         echo "" >> $GITHUB_STEP_SUMMARY
-        echo "### 📁 Generated Files:" >> $GITHUB_STEP_SUMMARY
-        echo "" >> $GITHUB_STEP_SUMMARY
-        echo "| Type | Files |" >> $GITHUB_STEP_SUMMARY
-        echo "|------|-------|" >> $GITHUB_STEP_SUMMARY
         
-        json_count=$(find fat/ -name "*.json" 2>/dev/null | wc -l)
-        fsh_count=$(find fsh/ -name "*.fsh" 2>/dev/null | wc -l)
+        # Check if the specific files were generated
+        fsh_file="fsh/no-kodeverk-${{ inputs.code_system_id }}.fsh"
+        json_file="fat/${{ inputs.code_system_id }}.json"
         
-        echo "| FAT JSON | $json_count file(s) |" >> $GITHUB_STEP_SUMMARY
-        echo "| FSH | $fsh_count file(s) |" >> $GITHUB_STEP_SUMMARY
+        if [ -f "$fsh_file" ] && [ -f "$json_file" ]; then
+          echo "### ✅ Generated Files:" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| File | Description |" >> $GITHUB_STEP_SUMMARY
+          echo "|------|-------------|" >> $GITHUB_STEP_SUMMARY
+          echo "| \`no-kodeverk-${{ inputs.code_system_id }}.fsh\` | FHIR Shorthand file |" >> $GITHUB_STEP_SUMMARY
+          echo "| \`${{ inputs.code_system_id }}.json\` | Original FAT API data |" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### 📋 FSH Content (Ready to Copy):" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "The complete FSH content is displayed in the workflow logs above and available in the artifact download." >> $GITHUB_STEP_SUMMARY
+        else
+          echo "### ❌ File Generation Issues:" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Expected files not found. Check the workflow logs for errors." >> $GITHUB_STEP_SUMMARY
+        fi
+        
         echo "" >> $GITHUB_STEP_SUMMARY
-        echo "### 📥 Download" >> $GITHUB_STEP_SUMMARY
+        echo "### 📥 Download Artifact" >> $GITHUB_STEP_SUMMARY
         echo "" >> $GITHUB_STEP_SUMMARY
-        echo "- Check the **Artifacts** section below to download the generated FSH files" >> $GITHUB_STEP_SUMMARY
-        echo "- Artifact name: \`fsh-files-${{ inputs.code_system_id }}\`" >> $GITHUB_STEP_SUMMARY
-        echo "- Files are available for 30 days" >> $GITHUB_STEP_SUMMARY
+        echo "- **Artifact name:** \`fsh-files-${{ inputs.code_system_id }}\`" >> $GITHUB_STEP_SUMMARY
+        echo "- **Contains:** Both FSH and JSON files for code system ${{ inputs.code_system_id }}" >> $GITHUB_STEP_SUMMARY
+        echo "- **Retention:** 30 days" >> $GITHUB_STEP_SUMMARY
         echo "" >> $GITHUB_STEP_SUMMARY
-        echo "### 🔧 Manual Usage" >> $GITHUB_STEP_SUMMARY
+        echo "### 🔧 Reproduce Locally" >> $GITHUB_STEP_SUMMARY
         echo "" >> $GITHUB_STEP_SUMMARY
         echo "\`\`\`bash" >> $GITHUB_STEP_SUMMARY
         if [ "${{ inputs.include_inactive }}" = "true" ]; then
