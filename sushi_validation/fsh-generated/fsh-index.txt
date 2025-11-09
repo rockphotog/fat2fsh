@@ -1,0 +1,4 @@
+Output File                                  Name            Type        FSH File              Lines
+CodeSystem-no-kodeverk-1101.codesystem.json  NoKodeverk1101  CodeSystem  no-kodeverk-1101.fsh  1 - 18
+CodeSystem-no-kodeverk-1102.codesystem.json  NoKodeverk1102  CodeSystem  no-kodeverk-1102.fsh  1 - 19
+CodeSystem-no-kodeverk-7426.codesystem.json  NoKodeverk7426  CodeSystem  no-kodeverk-7426.fsh  1 - 71

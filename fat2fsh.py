@@ -142,12 +142,23 @@ class FSHGenerator:
         oid = f"urn:oid:2.16.578.1.12.4.1.1.{code_system.id}"
         fsh_content.append(f"* ^identifier.value = \"{oid}\"")
         
-        # Status and dates
-        fsh_content.append("* ^status = #active")
+        # Enhancement 1: Use actual version from FAT data
+        if code_system.version:
+            fsh_content.append(f"* ^version = \"{code_system.version}\"")
         
-        # Add date from statusLastChanged if available
-        if code_system.status_last_changed:
+        # Enhancement 3: Map FAT active flag to FHIR status
+        if hasattr(code_system, 'active') and code_system.active is False:
+            fsh_content.append("* ^status = #retired")
+        else:
+            fsh_content.append("* ^status = #active")
+        
+        # Enhancement 2: Better date handling - use valid_from for publication
+        if code_system.valid_from:
             # Extract date part from ISO datetime
+            date_part = code_system.valid_from.split('T')[0]
+            fsh_content.append(f"* ^date = \"{date_part}\"")
+        elif code_system.status_last_changed:
+            # Fallback to status_last_changed if valid_from not available
             date_part = code_system.status_last_changed.split('T')[0]
             fsh_content.append(f"* ^date = \"{date_part}\"")
         
@@ -155,6 +166,11 @@ class FSHGenerator:
         if code_system.owner:
             fsh_content.append(f"* ^publisher = \"{code_system.owner}\"")
         
+        # Enhancement 4: Add standard Norwegian FHIR metadata
+        norway_jurisdiction = "urn:iso:std:iso:3166#NO \"Norway\""
+        fsh_content.append(f"* ^jurisdiction = {norway_jurisdiction}")
+        fsh_content.append("* ^caseSensitive = true")
+        fsh_content.append("* ^compositional = false")
         fsh_content.append("* ^content = #complete")
         fsh_content.append("")
         

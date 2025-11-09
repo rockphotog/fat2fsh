@@ -1,0 +1,21 @@
+id: no-kodeverk-validation
+canonical: http://helsedir.no/fhir
+name: NoKodeverValidation
+title: Norwegian Code Systems Validation
+description: Validation project for Norwegian code systems generated from FAT API
+status: draft
+version: 1.0.0
+fhirVersion: 4.0.1
+copyrightYear: 2025+
+releaseLabel: draft
+publisher:
+  name: Helsedirektoratet
+  url: https://helsedirektoratet.no
+jurisdiction: urn:iso:std:iso:3166#NO "Norway"
+
+dependencies:
+  hl7.fhir.r4.core: 4.0.1
+
+pages:
+  index.md:
+    title: Home

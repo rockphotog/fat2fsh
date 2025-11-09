@@ -1,0 +1,47 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "NoKodeverk1102",
+  "id": "no-kodeverk-1102.codesystem",
+  "title": "1102 Ja, nei, vet ikke",
+  "description": "Dette kodeverket inneholder koder for å angi svar Ja eller Nei og i tillegg beskrive tilfeller av usikre svar.",
+  "url": "http://helsedir.no/fhir/CodeSystem/no-kodeverk-1102",
+  "concept": [
+    {
+      "code": "1",
+      "display": "Ja"
+    },
+    {
+      "code": "2",
+      "display": "Nei"
+    },
+    {
+      "code": "9",
+      "display": "Vet ikke"
+    }
+  ],
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.578.1.12.4.1.1.1102"
+    }
+  ],
+  "version": "1.0.0",
+  "date": "2004-07-05",
+  "publisher": "Helsedirektoratet",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "NO",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Norway"
+        }
+      ]
+    }
+  ],
+  "caseSensitive": true,
+  "compositional": false,
+  "count": 3
+}

@@ -1,0 +1,95 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "no-kodeverk-validation",
+  "url": "http://helsedir.no/fhir/ImplementationGuide/no-kodeverk-validation",
+  "version": "1.0.0",
+  "name": "NoKodeverValidation",
+  "title": "Norwegian Code Systems Validation",
+  "status": "draft",
+  "publisher": "Helsedirektoratet",
+  "contact": [
+    {
+      "name": "Helsedirektoratet",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://helsedirektoratet.no"
+        }
+      ]
+    }
+  ],
+  "description": "Validation project for Norwegian code systems generated from FAT API",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "NO",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Norway"
+        }
+      ]
+    }
+  ],
+  "packageId": "no-kodeverk-validation",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "dependsOn": [
+    {
+      "packageId": "hl7.fhir.r4.core",
+      "version": "4.0.1",
+      "uri": "http://hl7.org/fhir",
+      "id": "hl7_fhir_r4_core"
+    }
+  ],
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "CodeSystem/no-kodeverk-1101.codesystem"
+        },
+        "name": "1101 Ja, nei",
+        "description": "Dette kodeverket inneholder koder for å angi svar Ja eller Nei.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/no-kodeverk-1102.codesystem"
+        },
+        "name": "1102 Ja, nei, vet ikke",
+        "description": "Dette kodeverket inneholder koder for å angi svar Ja eller Nei og i tillegg beskrive tilfeller av usikre svar.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/no-kodeverk-7426.codesystem"
+        },
+        "name": "7426 Helsepersonellregisterets (HPR) klassifikasjon av spesialiteter",
+        "description": "Dette kodeverket inneholder koder for spesialiteter i Helsepersonellregisteret. Kilde: Forskrift om spesialistgodkjenning av helsepersonell og turnusstillinger for leger.",
+        "exampleBoolean": false
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": [
+        {
+          "nameUrl": "index.html",
+          "title": "Home",
+          "generation": "markdown"
+        }
+      ]
+    },
+    "parameter": [
+      {
+        "code": "copyrightyear",
+        "value": "2025+"
+      },
+      {
+        "code": "releaselabel",
+        "value": "draft"
+      }
+    ]
+  }
+}

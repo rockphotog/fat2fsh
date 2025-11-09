@@ -1,0 +1,26 @@
+[
+  {
+    "outputFile": "CodeSystem-no-kodeverk-1101.codesystem.json",
+    "fshName": "NoKodeverk1101",
+    "fshType": "CodeSystem",
+    "fshFile": "no-kodeverk-1101.fsh",
+    "startLine": 1,
+    "endLine": 18
+  },
+  {
+    "outputFile": "CodeSystem-no-kodeverk-1102.codesystem.json",
+    "fshName": "NoKodeverk1102",
+    "fshType": "CodeSystem",
+    "fshFile": "no-kodeverk-1102.fsh",
+    "startLine": 1,
+    "endLine": 19
+  },
+  {
+    "outputFile": "CodeSystem-no-kodeverk-7426.codesystem.json",
+    "fshName": "NoKodeverk7426",
+    "fshType": "CodeSystem",
+    "fshFile": "no-kodeverk-7426.fsh",
+    "startLine": 1,
+    "endLine": 71
+  }
+]

@@ -1,0 +1,43 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "NoKodeverk1101",
+  "id": "no-kodeverk-1101.codesystem",
+  "title": "1101 Ja, nei",
+  "description": "Dette kodeverket inneholder koder for å angi svar Ja eller Nei.",
+  "url": "http://helsedir.no/fhir/CodeSystem/no-kodeverk-1101",
+  "concept": [
+    {
+      "code": "1",
+      "display": "Ja"
+    },
+    {
+      "code": "2",
+      "display": "Nei"
+    }
+  ],
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.578.1.12.4.1.1.1101"
+    }
+  ],
+  "version": "1.0.0",
+  "date": "2003-03-02",
+  "publisher": "Helsedirektoratet",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "NO",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Norway"
+        }
+      ]
+    }
+  ],
+  "caseSensitive": true,
+  "compositional": false,
+  "count": 2
+}
