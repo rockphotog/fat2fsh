@@ -18,7 +18,7 @@ A Python command line tool to download code systems from the FAT API (<https://f
 
 ## Current Scope
 
-**Currently supports:** FAT API "adm" endpoint only - "Kodeverk i standarder" (Code systems in standards)
+**Currently supports:** FAT API "adm" endpoint only - [Kodeverk i standarder](https://finnkode.helsedirektoratet.no/adm/collections) (formerly Volven).
 
 **Future plans:** Support for additional FAT API endpoints and code system categories will be added in upcoming releases.
 
