@@ -207,6 +207,6 @@ marimo/_lsp/
 __marimo__/
 
 # Project specific
-# fat/
-# fsh/
-# test_output/
+fat/
+fsh/
+test_output/

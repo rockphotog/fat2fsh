@@ -53,7 +53,7 @@ python3 fat2fsh.py --help
 
 The tool creates two directories:
 - `fat/` - Contains the raw JSON data downloaded from the FAT API
-- `fsh/` - Contains the generated FHIR Shorthand (.fsh) files
+- `fsh/` - Contains the generated FHIR Shorthand (.fsh) files with "no-kodeverk-" prefix
 
 ## Example
 
@@ -68,7 +68,7 @@ python3 fat2fsh.py -c 1101 --include-inactive -v
 # ✓ Successfully processed 1101
 # Files created:
 # - fat/1101.json (complete API response with metadata)
-# - fsh/1101.fsh (Norwegian standard FHIR Shorthand format)
+# - fsh/no-kodeverk-1101.fsh (Norwegian standard FHIR Shorthand format)
 ```
 
 Generated FSH follows Norwegian conventions:

@@ -15,3 +15,7 @@
 
 # Example command with multiple systems:
 # python3 fat2fsh.py -c system1 -c system2 --output-dir ./output --verbose
+
+# Output FSH files will be named with "no-kodeverk-" prefix:
+# - fsh/no-kodeverk-system1.fsh
+# - fsh/no-kodeverk-system2.fsh

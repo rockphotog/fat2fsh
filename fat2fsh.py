@@ -239,7 +239,7 @@ def main(code_systems: tuple, output_dir: str, verbose: bool, include_inactive: 
             
             # Generate and save FSH
             fsh_content = fsh_generator.generate_fsh(code_system)
-            fsh_file = fsh_dir / f"{code_system_id}.fsh"
+            fsh_file = fsh_dir / f"no-kodeverk-{code_system_id}.fsh"
             
             with open(fsh_file, 'w', encoding='utf-8') as f:
                 f.write(fsh_content)

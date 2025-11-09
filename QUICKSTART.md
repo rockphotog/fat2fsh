@@ -36,10 +36,10 @@ python3 fat2fsh.py -c example-system -v
 
 # Check the results
 ls fat/        # Raw JSON files
-ls fsh/        # Generated FSH files
+ls fsh/        # Generated FSH files (with no-kodeverk- prefix)
 
 # View a generated FSH file
-cat fsh/example-system.fsh
+cat fsh/no-kodeverk-example-system.fsh
 ```
 
 ## 5. Output Structure
@@ -51,7 +51,7 @@ fat2fsh/
 ├── fat/                    # Raw JSON data from FAT API
 │   └── system-id.json
 ├── fsh/                    # Generated FSH files
-│   └── system-id.fsh
+│   └── no-kodeverk-system-id.fsh
 └── ...
 ```
 
