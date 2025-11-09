@@ -22,16 +22,17 @@ This repository includes a GitHub Action that allows you to generate FHIR Shorth
 
 4. **Download Results**
    - Once completed, scroll down to the **Artifacts** section
-   - Download the artifact named `fsh-files-{code-system-id}`
-   - Extract the ZIP file to access:
-     - `fat/` directory: Original JSON data from FAT API
-     - `fsh/` directory: Generated FHIR Shorthand files
+   - Download the artifact named `no-kodeverk-{code-system-id}.fsh`
+   - The artifact contains a single FSH file (no ZIP extraction needed)
+   - File is ready to use immediately
 
 ## Benefits
 
 - **No Local Setup**: Run without installing Python or dependencies
 - **Quick Testing**: Validate code system conversions easily
-- **Shareable Results**: Download and share generated FSH files
+- **Single File Download**: Get just the FSH file you need (no ZIP extraction)
+- **Ready to Use**: FSH file is immediately usable in your FHIR projects
+- **Shareable Results**: Download and share generated FSH files easily
 - **Temporary Storage**: Artifacts are kept for 30 days
 - **Full Transparency**: View all generated content in workflow logs
 
@@ -42,12 +43,8 @@ This repository includes a GitHub Action that allows you to generate FHIR Shorth
 Code System ID: "1101"
 Include Inactive: false
 
-# And generate files like:
-artifacts/
-├── fat/
-│   └── 1101.json
-└── fsh/
-    └── no-kodeverk-1101.fsh
+# And generate a downloadable file:
+no-kodeverk-1101.fsh (single file download)
 ```
 
 ## Use Cases

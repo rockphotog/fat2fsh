@@ -74,17 +74,11 @@ jobs:
           echo "python3 fat2fsh.py -c ${{ inputs.code_system_id }} -v"
         fi
         
-    - name: Create artifact structure
-      run: |
-        mkdir -p artifacts/fat artifacts/fsh
-        cp fat/*.json artifacts/fat/ 2>/dev/null || echo "No JSON files to copy"
-        cp fsh/*.fsh artifacts/fsh/ 2>/dev/null || echo "No FSH files to copy"
-        
-    - name: Upload FSH artifacts
+    - name: Upload single FSH file
       uses: actions/upload-artifact@v4
       with:
-        name: fsh-files-${{ inputs.code_system_id }}
-        path: artifacts/
+        name: no-kodeverk-${{ inputs.code_system_id }}.fsh
+        path: fsh/no-kodeverk-${{ inputs.code_system_id }}.fsh
         retention-days: 30
         
     - name: Summary
@@ -99,28 +93,28 @@ jobs:
         fsh_file="fsh/no-kodeverk-${{ inputs.code_system_id }}.fsh"
         json_file="fat/${{ inputs.code_system_id }}.json"
         
-        if [ -f "$fsh_file" ] && [ -f "$json_file" ]; then
-          echo "### ✅ Generated Files:" >> $GITHUB_STEP_SUMMARY
+        if [ -f "$fsh_file" ]; then
+          echo "### ✅ Generated FSH File:" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "| File | Description |" >> $GITHUB_STEP_SUMMARY
           echo "|------|-------------|" >> $GITHUB_STEP_SUMMARY
-          echo "| \`no-kodeverk-${{ inputs.code_system_id }}.fsh\` | FHIR Shorthand file |" >> $GITHUB_STEP_SUMMARY
-          echo "| \`${{ inputs.code_system_id }}.json\` | Original FAT API data |" >> $GITHUB_STEP_SUMMARY
+          echo "| \`no-kodeverk-${{ inputs.code_system_id }}.fsh\` | FHIR Shorthand file (ready to download) |" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "### 📋 FSH Content (Ready to Copy):" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "The complete FSH content is displayed in the workflow logs above and available in the artifact download." >> $GITHUB_STEP_SUMMARY
+          echo "The complete FSH content is displayed in the workflow logs above and available as a single-file download." >> $GITHUB_STEP_SUMMARY
         else
           echo "### ❌ File Generation Issues:" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "Expected files not found. Check the workflow logs for errors." >> $GITHUB_STEP_SUMMARY
+          echo "Expected FSH file not found. Check the workflow logs for errors." >> $GITHUB_STEP_SUMMARY
         fi
         
         echo "" >> $GITHUB_STEP_SUMMARY
-        echo "### 📥 Download Artifact" >> $GITHUB_STEP_SUMMARY
+        echo "### 📥 Download FSH File" >> $GITHUB_STEP_SUMMARY
         echo "" >> $GITHUB_STEP_SUMMARY
-        echo "- **Artifact name:** \`fsh-files-${{ inputs.code_system_id }}\`" >> $GITHUB_STEP_SUMMARY
-        echo "- **Contains:** Both FSH and JSON files for code system ${{ inputs.code_system_id }}" >> $GITHUB_STEP_SUMMARY
+        echo "- **Artifact name:** \`no-kodeverk-${{ inputs.code_system_id }}.fsh\`" >> $GITHUB_STEP_SUMMARY
+        echo "- **Contains:** Single FSH file (no ZIP, direct download)" >> $GITHUB_STEP_SUMMARY
+        echo "- **File size:** Ready-to-use FHIR Shorthand format" >> $GITHUB_STEP_SUMMARY
         echo "- **Retention:** 30 days" >> $GITHUB_STEP_SUMMARY
         echo "" >> $GITHUB_STEP_SUMMARY
         echo "### 🔧 Reproduce Locally" >> $GITHUB_STEP_SUMMARY
