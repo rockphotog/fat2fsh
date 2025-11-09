@@ -1,15 +1,14 @@
 #!/usr/bin/env python3
 """
-FAT to FSH Converter
-A command line tool to download code systems from the FAT API and convert them to FHIR CodeSystem with FSH notation.
+fat2fsh - Convert FAT API code systems to FHIR FSH notation.
+
+A command-line tool to download Norwegian code systems from the FAT API
+and convert them to FHIR Shorthand (FSH) notation following Norwegian standards.
 """
 
 import json
-import os
-import sys
 from pathlib import Path
 from typing import List, Optional
-
 import click
 import requests
 from pydantic import BaseModel, Field
@@ -110,11 +109,9 @@ class FATAPIClient:
             return code_system
             
         except requests.exceptions.RequestException as e:
-            click.echo(f"Error downloading code system {code_system_id}: {e}", err=True)
-            sys.exit(1)
+            raise Exception(f"API error for {code_system_id}: {e}")
         except json.JSONDecodeError as e:
-            click.echo(f"Error parsing JSON response for {code_system_id}: {e}", err=True)
-            sys.exit(1)
+            raise Exception(f"JSON parse error for {code_system_id}: {e}")
 
 
 class FSHGenerator:
@@ -209,8 +206,8 @@ def main(code_systems: tuple, output_dir: str, verbose: bool, include_inactive: 
     fsh_dir = output_path / "fsh"
     
     # Create output directories
-    fat_dir.mkdir(exist_ok=True)
-    fsh_dir.mkdir(exist_ok=True)
+    fat_dir.mkdir(parents=True, exist_ok=True)
+    fsh_dir.mkdir(parents=True, exist_ok=True)
     
     if verbose:
         click.echo(f"Output directory: {output_path.absolute()}")

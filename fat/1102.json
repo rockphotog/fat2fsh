@@ -24,6 +24,21 @@
       "code": "9",
       "display": "Vet ikke",
       "definition": ""
+    },
+    {
+      "code": "J",
+      "display": "Ja",
+      "definition": ""
+    },
+    {
+      "code": "N",
+      "display": "Nei",
+      "definition": ""
+    },
+    {
+      "code": "V",
+      "display": "Vet ikke",
+      "definition": ""
     }
   ]
 }
