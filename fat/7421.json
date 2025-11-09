@@ -1,0 +1,44 @@
+{
+  "id": "7421",
+  "name": "Reseptgruppe",
+  "title": "Reseptgruppe",
+  "description": null,
+  "version": "1.0.0",
+  "status": "Til utbredelse eller er i bruk",
+  "status_last_changed": "2013-01-07T14:27:36.0000000",
+  "owner": "Direktoratet for medisinske produkter",
+  "valid_from": "2008-02-28T00:00:00.000",
+  "active": true,
+  "concepts": [
+    {
+      "code": "A",
+      "display": "Reseptgruppe A",
+      "definition": ""
+    },
+    {
+      "code": "B",
+      "display": "Reseptgruppe B",
+      "definition": ""
+    },
+    {
+      "code": "C",
+      "display": "Reseptgruppe C",
+      "definition": ""
+    },
+    {
+      "code": "CF",
+      "display": "Reseptgruppe CF",
+      "definition": "Brukes på legemiddel som har pakninger i både reseptgruppe C og Reseptgruppe F"
+    },
+    {
+      "code": "F",
+      "display": "Reseptgruppe F",
+      "definition": ""
+    },
+    {
+      "code": "K",
+      "display": "Kosttilskudd",
+      "definition": "Tas i bruk sammen med multidose i eResept"
+    }
+  ]
+}
