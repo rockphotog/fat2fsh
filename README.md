@@ -1,5 +1,7 @@
 # fat2fsh
 
+UNDER DEVELOPMENT - EXPERIMENTAL
+
 A Python command line tool to download code systems from the FAT API (<https://fat.kote.helsedirektoratet.no>) and convert them to FHIR CodeSystem with FHIR Shorthand (FSH) notation.
 
 ## Features
