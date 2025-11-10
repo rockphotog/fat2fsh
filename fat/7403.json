@@ -1,0 +1,1469 @@
+{
+  "id": "7403",
+  "name": "Produktgruppe",
+  "title": "Produktgruppe",
+  "description": "Kodeverk for medisinsk forbruksmateriell og dietetiske næringsmidler som kan forskrives på blå resept, og for brystproteser som refunderes etter folketrygdloven § 10-7i.",
+  "version": "1.0.0",
+  "status": "Til utbredelse eller er i bruk",
+  "status_last_changed": "2025-10-20T00:00:00.0000000",
+  "owner": "Helfo",
+  "valid_from": "2007-01-09T00:00:00.000",
+  "active": true,
+  "concepts": [
+    {
+      "code": "5",
+      "display": "Medisinsk forbruksmateriell",
+      "definition": ""
+    },
+    {
+      "code": "6",
+      "display": "Næringsmidler",
+      "definition": ""
+    },
+    {
+      "code": "9",
+      "display": "Brystproteser",
+      "definition": ""
+    },
+    {
+      "code": "501",
+      "display": "Forbruksmateriell ved inkontinens",
+      "definition": ""
+    },
+    {
+      "code": "502",
+      "display": "Forbruksmateriell ved urinretensjon",
+      "definition": ""
+    },
+    {
+      "code": "503",
+      "display": "Forbruksmateriell til laryngektomerte",
+      "definition": ""
+    },
+    {
+      "code": "504",
+      "display": "Forbruksmateriell ved diabetes",
+      "definition": ""
+    },
+    {
+      "code": "505",
+      "display": "Forbruksmateriell ved stomi",
+      "definition": ""
+    },
+    {
+      "code": "506",
+      "display": "Forbruksmateriell til blødere",
+      "definition": ""
+    },
+    {
+      "code": "507",
+      "display": "Forbruksmateriell til lungesyke",
+      "definition": ""
+    },
+    {
+      "code": "508",
+      "display": "Forbruksmateriell ved veksthormonforstyrrelser",
+      "definition": ""
+    },
+    {
+      "code": "509",
+      "display": "Forbruksmateriell til nyretransplanterte",
+      "definition": ""
+    },
+    {
+      "code": "510",
+      "display": "Hoftebeskyttere",
+      "definition": ""
+    },
+    {
+      "code": "511",
+      "display": "Forbruksmateriell til glukosemåling v/intravenøs ernæring",
+      "definition": ""
+    },
+    {
+      "code": "512",
+      "display": "Forbruksmateriell ved tuberkulosebehandling",
+      "definition": ""
+    },
+    {
+      "code": "513",
+      "display": "Forbruksmateriell ved epidermolysis bullosa",
+      "definition": ""
+    },
+    {
+      "code": "514",
+      "display": "Forbruksmateriell til måling og administrasjon av legemidler",
+      "definition": ""
+    },
+    {
+      "code": "515",
+      "display": "TestGruppe515",
+      "definition": "Kodeteksten vil bli oppdatert når koden blir gyldig 1. januar 2026"
+    },
+    {
+      "code": "601",
+      "display": "Næringsmidler ved diverse tilstander",
+      "definition": ""
+    },
+    {
+      "code": "602",
+      "display": "Næringsmidler ved melkeproteinallergi med mer",
+      "definition": ""
+    },
+    {
+      "code": "603",
+      "display": "Næringsmidler ved Fenylketonuri (Føllings sykdom)",
+      "definition": ""
+    },
+    {
+      "code": "604",
+      "display": "Næringsmidler ved kreft/immunsvikt/sykdom som krever næringstilskudd",
+      "definition": ""
+    },
+    {
+      "code": "605",
+      "display": "TestGruppe605",
+      "definition": "Kodeteksten vil bli oppdatert når koden blir gyldig 1. desember"
+    },
+    {
+      "code": "606",
+      "display": "TestGruppe606",
+      "definition": "Kodeteksten vil bli oppdatert når koden blir gyldig 1. desember 2025"
+    },
+    {
+      "code": "607",
+      "display": "TestGruppe607",
+      "definition": "Kodeteksten vil bli oppdatert når koden blir gyldig 1. desember 2025"
+    },
+    {
+      "code": "609",
+      "display": "TestGruppe609",
+      "definition": "Kodeteksten vil bli oppdatert når koden blir gyldig 1. desember 2025"
+    },
+    {
+      "code": "900",
+      "display": "Brystproteser",
+      "definition": ""
+    },
+    {
+      "code": "50101",
+      "display": "Buksebleier",
+      "definition": ""
+    },
+    {
+      "code": "50102",
+      "display": "Bleieholder",
+      "definition": ""
+    },
+    {
+      "code": "50104",
+      "display": "Kladder/sengeunderlegg",
+      "definition": ""
+    },
+    {
+      "code": "50105",
+      "display": "Utstyr til rektal skylling",
+      "definition": ""
+    },
+    {
+      "code": "50106",
+      "display": "Uridomer og festeutstyr",
+      "definition": ""
+    },
+    {
+      "code": "50107",
+      "display": "Urinposer og festeutstyr",
+      "definition": ""
+    },
+    {
+      "code": "50109",
+      "display": "Urin- og avføringsstoppere",
+      "definition": ""
+    },
+    {
+      "code": "50110",
+      "display": "Hudfilm",
+      "definition": ""
+    },
+    {
+      "code": "50111",
+      "display": "Bleier",
+      "definition": ""
+    },
+    {
+      "code": "50201",
+      "display": "Kateter",
+      "definition": ""
+    },
+    {
+      "code": "50203",
+      "display": "Urinposer og tilleggsutstyr",
+      "definition": ""
+    },
+    {
+      "code": "50301",
+      "display": "Forbruksmateriell til laryngektomerte",
+      "definition": ""
+    },
+    {
+      "code": "50401",
+      "display": "Blodsukkertester",
+      "definition": ""
+    },
+    {
+      "code": "50402",
+      "display": "Injeksjonskateter",
+      "definition": ""
+    },
+    {
+      "code": "50403",
+      "display": "Insulinpenner",
+      "definition": ""
+    },
+    {
+      "code": "50404",
+      "display": "Insulinsprøyter",
+      "definition": ""
+    },
+    {
+      "code": "50405",
+      "display": "Lansetter for stikkeapparat",
+      "definition": ""
+    },
+    {
+      "code": "50406",
+      "display": "Nåler til insulinpenner",
+      "definition": ""
+    },
+    {
+      "code": "50407",
+      "display": "Ketontester",
+      "definition": ""
+    },
+    {
+      "code": "50506",
+      "display": "Hjelpemateriell",
+      "definition": ""
+    },
+    {
+      "code": "50507",
+      "display": "Hjelpemateriell - kompresser",
+      "definition": ""
+    },
+    {
+      "code": "50508",
+      "display": "Hjelpemateriell - poseovertrekk",
+      "definition": ""
+    },
+    {
+      "code": "50509",
+      "display": "Hjelpemateriell - som må rekvireres spesielt av lege",
+      "definition": ""
+    },
+    {
+      "code": "50511",
+      "display": "Utstyr til irrigasjon i stomi",
+      "definition": ""
+    },
+    {
+      "code": "50513",
+      "display": "Stomipropper",
+      "definition": ""
+    },
+    {
+      "code": "50520",
+      "display": "Urinposer til urostomi",
+      "definition": ""
+    },
+    {
+      "code": "50521",
+      "display": "Utstyr for kontinente åpninger",
+      "definition": ""
+    },
+    {
+      "code": "50523",
+      "display": "Utstyr for nefrostomi",
+      "definition": ""
+    },
+    {
+      "code": "50524",
+      "display": "Oppsamlingspose ved redusert tarmfunksjon",
+      "definition": ""
+    },
+    {
+      "code": "50525",
+      "display": "Endelt - Poser med plate",
+      "definition": ""
+    },
+    {
+      "code": "50526",
+      "display": "Todelt - Plater",
+      "definition": ""
+    },
+    {
+      "code": "50527",
+      "display": "Todelt - Poser",
+      "definition": ""
+    },
+    {
+      "code": "50601",
+      "display": "Forbruksmateriell til blødere",
+      "definition": ""
+    },
+    {
+      "code": "50701",
+      "display": "Forbruksmateriell til lungesyke",
+      "definition": ""
+    },
+    {
+      "code": "50801",
+      "display": "Forbruksmateriell ved veksthormonforstyrrelser",
+      "definition": ""
+    },
+    {
+      "code": "50901",
+      "display": "Testmatr. for nyretranspl.",
+      "definition": ""
+    },
+    {
+      "code": "51001",
+      "display": "Hoftebeskytter",
+      "definition": ""
+    },
+    {
+      "code": "51101",
+      "display": "Blodsukkertester",
+      "definition": ""
+    },
+    {
+      "code": "51102",
+      "display": "Lansetter",
+      "definition": ""
+    },
+    {
+      "code": "51201",
+      "display": "Måle- og administrasjonsutstyr",
+      "definition": ""
+    },
+    {
+      "code": "51202",
+      "display": "Utstyr til sårskift",
+      "definition": ""
+    },
+    {
+      "code": "51203",
+      "display": "Bandasjer",
+      "definition": ""
+    },
+    {
+      "code": "51301",
+      "display": "Bandasjer",
+      "definition": ""
+    },
+    {
+      "code": "51302",
+      "display": "Fiksering",
+      "definition": ""
+    },
+    {
+      "code": "51303",
+      "display": "Utstyr til sårskift",
+      "definition": ""
+    },
+    {
+      "code": "51304",
+      "display": "Kremer, oljer og salver",
+      "definition": ""
+    },
+    {
+      "code": "51401",
+      "display": "Sprøyter",
+      "definition": ""
+    },
+    {
+      "code": "51402",
+      "display": "Kanyler",
+      "definition": ""
+    },
+    {
+      "code": "51403",
+      "display": "Annet måle- og administrasjonsutstyr",
+      "definition": ""
+    },
+    {
+      "code": "51501",
+      "display": "TestGruppe51501",
+      "definition": "Kodeteksten vil bli oppdatert når koden blir gyldig 1. januar 2026"
+    },
+    {
+      "code": "60101",
+      "display": "Næringsdrikker",
+      "definition": ""
+    },
+    {
+      "code": "60102",
+      "display": "Næringsdrikker, barn",
+      "definition": ""
+    },
+    {
+      "code": "60103",
+      "display": "Næringstilskudd - pulver, pudding",
+      "definition": ""
+    },
+    {
+      "code": "60104",
+      "display": "Sondenæring",
+      "definition": ""
+    },
+    {
+      "code": "60105",
+      "display": "Sondenæring, barn",
+      "definition": ""
+    },
+    {
+      "code": "60106",
+      "display": "Spesialløsninger",
+      "definition": ""
+    },
+    {
+      "code": "60107",
+      "display": "Melkeerstatninger, barn",
+      "definition": ""
+    },
+    {
+      "code": "60108",
+      "display": "Næringsmidler - Medfødte stoffskiftesykdommer",
+      "definition": ""
+    },
+    {
+      "code": "60201",
+      "display": "Næringsdrikker",
+      "definition": ""
+    },
+    {
+      "code": "60202",
+      "display": "Næringsdrikker, barn",
+      "definition": ""
+    },
+    {
+      "code": "60204",
+      "display": "Sondenæring",
+      "definition": ""
+    },
+    {
+      "code": "60206",
+      "display": "Melkeerstatninger",
+      "definition": ""
+    },
+    {
+      "code": "60301",
+      "display": "Næringsmidler ved Fenylketonuri (Føllings sykdom)",
+      "definition": ""
+    },
+    {
+      "code": "60401",
+      "display": "Næringsdrikker",
+      "definition": ""
+    },
+    {
+      "code": "60402",
+      "display": "Næringsdrikker, barn",
+      "definition": ""
+    },
+    {
+      "code": "60403",
+      "display": "Næringstilskudd - pulver, pudding",
+      "definition": ""
+    },
+    {
+      "code": "60404",
+      "display": "Sondenæring",
+      "definition": ""
+    },
+    {
+      "code": "60405",
+      "display": "Sondenæring, barn",
+      "definition": ""
+    },
+    {
+      "code": "60406",
+      "display": "Spesialløsninger",
+      "definition": ""
+    },
+    {
+      "code": "60407",
+      "display": "Melkeerstatninger, barn",
+      "definition": ""
+    },
+    {
+      "code": "60501",
+      "display": "TestGruppe60501",
+      "definition": "Kodeteksten vil bli oppdatert når koden blir gyldig 1. desember"
+    },
+    {
+      "code": "90001",
+      "display": "Brystproteser",
+      "definition": ""
+    },
+    {
+      "code": "90002",
+      "display": "Brystvorter",
+      "definition": ""
+    },
+    {
+      "code": "90003",
+      "display": "Festeplater",
+      "definition": ""
+    },
+    {
+      "code": "90004",
+      "display": "Interim/vattprotese",
+      "definition": ""
+    },
+    {
+      "code": "5010102",
+      "display": "Buksebleier",
+      "definition": ""
+    },
+    {
+      "code": "5010207",
+      "display": "Bleieholder med antallsbegrensning",
+      "definition": ""
+    },
+    {
+      "code": "5010401",
+      "display": "Kladder/sengeunderlegg",
+      "definition": ""
+    },
+    {
+      "code": "5010501",
+      "display": "Utstyr til rektal skylling",
+      "definition": ""
+    },
+    {
+      "code": "5010502",
+      "display": "Kateter til rektal skylling",
+      "definition": ""
+    },
+    {
+      "code": "5010504",
+      "display": "Analirrigasjonssystem",
+      "definition": ""
+    },
+    {
+      "code": "5010507",
+      "display": "Kateter tilhørende analirrigasjonssystem",
+      "definition": ""
+    },
+    {
+      "code": "5010508",
+      "display": "Slanger og festebånd tilhørende analirrigasjonssystem",
+      "definition": ""
+    },
+    {
+      "code": "5010601",
+      "display": "Festeutstyr for uridomer",
+      "definition": ""
+    },
+    {
+      "code": "5010602",
+      "display": "Uridomer selvklebende",
+      "definition": ""
+    },
+    {
+      "code": "5010603",
+      "display": "Uridomer med festestrips",
+      "definition": ""
+    },
+    {
+      "code": "5010701",
+      "display": "Urinposer til uridom",
+      "definition": ""
+    },
+    {
+      "code": "5010702",
+      "display": "Oppsamlingsposer til urin eller avføring",
+      "definition": ""
+    },
+    {
+      "code": "5010703",
+      "display": "Festeutstyr for urinposer",
+      "definition": ""
+    },
+    {
+      "code": "5010901",
+      "display": "Urin- og avføringsstoppere",
+      "definition": ""
+    },
+    {
+      "code": "5011001",
+      "display": "Hudfilm",
+      "definition": ""
+    },
+    {
+      "code": "5011101",
+      "display": "Bleier lett",
+      "definition": ""
+    },
+    {
+      "code": "5011102",
+      "display": "Bleier middels",
+      "definition": ""
+    },
+    {
+      "code": "5011103",
+      "display": "Bleier tung",
+      "definition": ""
+    },
+    {
+      "code": "5011104",
+      "display": "Dråpesamlere menn",
+      "definition": ""
+    },
+    {
+      "code": "5011105",
+      "display": "Beltebleier",
+      "definition": ""
+    },
+    {
+      "code": "5011106",
+      "display": "Tapebleier",
+      "definition": ""
+    },
+    {
+      "code": "5011107",
+      "display": "Tapebleier barn",
+      "definition": ""
+    },
+    {
+      "code": "5011108",
+      "display": "Buksebleier barn",
+      "definition": ""
+    },
+    {
+      "code": "5011109",
+      "display": "Bleier bariatri",
+      "definition": ""
+    },
+    {
+      "code": "5011110",
+      "display": "Innleggsbleier",
+      "definition": ""
+    },
+    {
+      "code": "5020103",
+      "display": "Inneliggende kateter",
+      "definition": ""
+    },
+    {
+      "code": "5020104",
+      "display": "Kateter striktur, hydrofile",
+      "definition": ""
+    },
+    {
+      "code": "5020105",
+      "display": "Tappekateter - Fuktede hydrofile med urinpose",
+      "definition": ""
+    },
+    {
+      "code": "5020106",
+      "display": "Tappekateter med gel",
+      "definition": ""
+    },
+    {
+      "code": "5020109",
+      "display": "Tappekateter - Fuktede hydrofile",
+      "definition": ""
+    },
+    {
+      "code": "5020110",
+      "display": "Tappekateter - Hydrofile",
+      "definition": ""
+    },
+    {
+      "code": "5020116",
+      "display": "Kateter ved særskilte kateteriseringsutfordringer",
+      "definition": ""
+    },
+    {
+      "code": "5020301",
+      "display": "Urinposer til kateter",
+      "definition": ""
+    },
+    {
+      "code": "5020302",
+      "display": "Festeutstyr til kateter og urinposer",
+      "definition": ""
+    },
+    {
+      "code": "5020303",
+      "display": "Tilleggsutstyr til kateter",
+      "definition": ""
+    },
+    {
+      "code": "5020304",
+      "display": "Skyllevæsker til urologisk bruk",
+      "definition": ""
+    },
+    {
+      "code": "5020305",
+      "display": "Skyllevæsker til urologisk bruk ved kateterrelaterte infeksjoner",
+      "definition": ""
+    },
+    {
+      "code": "5030101",
+      "display": "Kanyler/innerkanyler",
+      "definition": ""
+    },
+    {
+      "code": "5030102",
+      "display": "Kompresser",
+      "definition": ""
+    },
+    {
+      "code": "5030103",
+      "display": "Natriumklorid/sterilt vann",
+      "definition": ""
+    },
+    {
+      "code": "5030105",
+      "display": "Stomabandasjer og filtre",
+      "definition": ""
+    },
+    {
+      "code": "5030107",
+      "display": "Diverse utstyr til laryngektomerte",
+      "definition": ""
+    },
+    {
+      "code": "5040101",
+      "display": "Blodsukkertester",
+      "definition": ""
+    },
+    {
+      "code": "5040201",
+      "display": "Injeksjonskateter",
+      "definition": ""
+    },
+    {
+      "code": "5040301",
+      "display": "Insulinpenner",
+      "definition": ""
+    },
+    {
+      "code": "5040401",
+      "display": "30 IE",
+      "definition": ""
+    },
+    {
+      "code": "5040402",
+      "display": "50 IE",
+      "definition": ""
+    },
+    {
+      "code": "5040403",
+      "display": "100 IE",
+      "definition": ""
+    },
+    {
+      "code": "5040501",
+      "display": "Lansetter for stikkeapparat",
+      "definition": ""
+    },
+    {
+      "code": "5040601",
+      "display": "Nåler til insulinpenner",
+      "definition": ""
+    },
+    {
+      "code": "5040701",
+      "display": "Ketontester for urin",
+      "definition": ""
+    },
+    {
+      "code": "5040704",
+      "display": "Ketontester for blod",
+      "definition": ""
+    },
+    {
+      "code": "5050601",
+      "display": "Barrièrekrem",
+      "definition": ""
+    },
+    {
+      "code": "5050603",
+      "display": "Stomibelter",
+      "definition": ""
+    },
+    {
+      "code": "5050605",
+      "display": "Belter til fiksering",
+      "definition": ""
+    },
+    {
+      "code": "5050606",
+      "display": "Filter",
+      "definition": ""
+    },
+    {
+      "code": "5050607",
+      "display": "Hefteplaster",
+      "definition": ""
+    },
+    {
+      "code": "5050608",
+      "display": "Produkter for sår under stomiplaten",
+      "definition": ""
+    },
+    {
+      "code": "5050609",
+      "display": "Geldannende granulat",
+      "definition": ""
+    },
+    {
+      "code": "5050610",
+      "display": "Lukkeklips og klemmer til tømbare poser",
+      "definition": ""
+    },
+    {
+      "code": "5050612",
+      "display": "Posedeodoranter",
+      "definition": ""
+    },
+    {
+      "code": "5050613",
+      "display": "Strøpulver",
+      "definition": ""
+    },
+    {
+      "code": "5050616",
+      "display": "Tetningsring og -pasta",
+      "definition": ""
+    },
+    {
+      "code": "5050619",
+      "display": "Kleberfjerner serviett",
+      "definition": ""
+    },
+    {
+      "code": "5050620",
+      "display": "Kleberfjerner spray",
+      "definition": ""
+    },
+    {
+      "code": "5050702",
+      "display": "Non-Woven kompresser",
+      "definition": ""
+    },
+    {
+      "code": "5050801",
+      "display": "Poseovertrekk",
+      "definition": ""
+    },
+    {
+      "code": "5050901",
+      "display": "Belter til kompresjon",
+      "definition": ""
+    },
+    {
+      "code": "5050902",
+      "display": "Hudfilm",
+      "definition": ""
+    },
+    {
+      "code": "5050907",
+      "display": "Plateforlenger",
+      "definition": ""
+    },
+    {
+      "code": "5051101",
+      "display": "Utstyr til irrigasjon i stomi",
+      "definition": ""
+    },
+    {
+      "code": "5051301",
+      "display": "Endels stomipropp",
+      "definition": ""
+    },
+    {
+      "code": "5052001",
+      "display": "Urinposer til urostomi",
+      "definition": ""
+    },
+    {
+      "code": "5052002",
+      "display": "Utstyr til urinposer til urostomi",
+      "definition": ""
+    },
+    {
+      "code": "5052101",
+      "display": "Produkter for tildekning av kontinente åpninger",
+      "definition": ""
+    },
+    {
+      "code": "5052102",
+      "display": "Eksplorasjonskrem",
+      "definition": ""
+    },
+    {
+      "code": "5052104",
+      "display": "Katetere",
+      "definition": ""
+    },
+    {
+      "code": "5052105",
+      "display": "Skyllesprøyte",
+      "definition": ""
+    },
+    {
+      "code": "5052107",
+      "display": "Inneliggende urinkateter med ballong",
+      "definition": ""
+    },
+    {
+      "code": "5052301",
+      "display": "Utstyr for nefrostomi",
+      "definition": ""
+    },
+    {
+      "code": "5052401",
+      "display": "Oppsamlingspose ved redusert tarmfunksjon",
+      "definition": ""
+    },
+    {
+      "code": "5052501",
+      "display": "Poser med plate - Lukket - Flat",
+      "definition": ""
+    },
+    {
+      "code": "5052502",
+      "display": "Poser med plate - Lukket - Konveks/Konkav",
+      "definition": ""
+    },
+    {
+      "code": "5052503",
+      "display": "Poser med plate - Tømbar - Flat",
+      "definition": ""
+    },
+    {
+      "code": "5052504",
+      "display": "Poser med plate - Tømbar - Konveks/Konkav",
+      "definition": ""
+    },
+    {
+      "code": "5052505",
+      "display": "Poser med plate - Uro - Flat",
+      "definition": ""
+    },
+    {
+      "code": "5052506",
+      "display": "Poser med plate - Uro - Konveks/Konkav",
+      "definition": ""
+    },
+    {
+      "code": "5052507",
+      "display": "Poser med plate - Barn",
+      "definition": ""
+    },
+    {
+      "code": "5052508",
+      "display": "Stomicap med plate",
+      "definition": ""
+    },
+    {
+      "code": "5052601",
+      "display": "Plater - Ringkobling - Flat",
+      "definition": ""
+    },
+    {
+      "code": "5052602",
+      "display": "Plater - Ringkobling - Konveks/Konkav",
+      "definition": ""
+    },
+    {
+      "code": "5052603",
+      "display": "Plater - Kleberkobling - Flat",
+      "definition": ""
+    },
+    {
+      "code": "5052604",
+      "display": "Plater - Kleberkobling - Konveks/Konkav",
+      "definition": ""
+    },
+    {
+      "code": "5052605",
+      "display": "Plater - Barn",
+      "definition": ""
+    },
+    {
+      "code": "5052701",
+      "display": "Poser - Ringkobling - Lukket",
+      "definition": ""
+    },
+    {
+      "code": "5052702",
+      "display": "Poser - Ringkobling - Tømbar",
+      "definition": ""
+    },
+    {
+      "code": "5052703",
+      "display": "Poser - Ringkobling - Uro",
+      "definition": ""
+    },
+    {
+      "code": "5052704",
+      "display": "Poser - Kleberkobling - Lukket",
+      "definition": ""
+    },
+    {
+      "code": "5052705",
+      "display": "Poser - Kleberkobling - Tømbar",
+      "definition": ""
+    },
+    {
+      "code": "5052706",
+      "display": "Poser - Kleberkobling - Uro",
+      "definition": ""
+    },
+    {
+      "code": "5052707",
+      "display": "Poser - Barn",
+      "definition": ""
+    },
+    {
+      "code": "5052708",
+      "display": "Stomicap",
+      "definition": ""
+    },
+    {
+      "code": "5060101",
+      "display": "Blodstillende produkter",
+      "definition": ""
+    },
+    {
+      "code": "5060102",
+      "display": "Kanyler",
+      "definition": ""
+    },
+    {
+      "code": "5060103",
+      "display": "Tupfere",
+      "definition": ""
+    },
+    {
+      "code": "5060104",
+      "display": "Sprøyter",
+      "definition": ""
+    },
+    {
+      "code": "5060105",
+      "display": "Staseslanger, -bånd",
+      "definition": ""
+    },
+    {
+      "code": "5060106",
+      "display": "Sprøytepropp",
+      "definition": ""
+    },
+    {
+      "code": "5070101",
+      "display": "Inhalasjonskamre med eller uten maske",
+      "definition": ""
+    },
+    {
+      "code": "5070102",
+      "display": "Kanyler",
+      "definition": ""
+    },
+    {
+      "code": "5070103",
+      "display": "Natriumklorid/sterilt vann",
+      "definition": ""
+    },
+    {
+      "code": "5070104",
+      "display": "PEF-målere",
+      "definition": ""
+    },
+    {
+      "code": "5070105",
+      "display": "Sprøyter",
+      "definition": ""
+    },
+    {
+      "code": "5070106",
+      "display": "Transtracheal kateter og forleng.slange",
+      "definition": ""
+    },
+    {
+      "code": "5070107",
+      "display": "Masker til inhalasjonskamre",
+      "definition": ""
+    },
+    {
+      "code": "5080101",
+      "display": "Forbruksmateriell ved veksthormonforstyrrelser",
+      "definition": ""
+    },
+    {
+      "code": "5090101",
+      "display": "Testmatriell for nyretransplanterte",
+      "definition": ""
+    },
+    {
+      "code": "5100101",
+      "display": "Hoftebeskytter",
+      "definition": ""
+    },
+    {
+      "code": "5110101",
+      "display": "Blodsukkertester",
+      "definition": ""
+    },
+    {
+      "code": "5110201",
+      "display": "Lansetter for stikkeapparat",
+      "definition": ""
+    },
+    {
+      "code": "5120101",
+      "display": "Sprøyter",
+      "definition": ""
+    },
+    {
+      "code": "5120102",
+      "display": "Perorale sprøyter",
+      "definition": ""
+    },
+    {
+      "code": "5120103",
+      "display": "Kanyler",
+      "definition": ""
+    },
+    {
+      "code": "5120104",
+      "display": "Annet måle- og administrasjonsutstyr",
+      "definition": ""
+    },
+    {
+      "code": "5120201",
+      "display": "Utstyr til sårskift",
+      "definition": ""
+    },
+    {
+      "code": "5120202",
+      "display": "Kompresser",
+      "definition": ""
+    },
+    {
+      "code": "5120203",
+      "display": "Kleberfjerner",
+      "definition": ""
+    },
+    {
+      "code": "5120204",
+      "display": "Hudfilm",
+      "definition": ""
+    },
+    {
+      "code": "5120205",
+      "display": "Barrierekrem",
+      "definition": ""
+    },
+    {
+      "code": "5120301",
+      "display": "Bandasjer",
+      "definition": ""
+    },
+    {
+      "code": "5120302",
+      "display": "Bandasjefiksering",
+      "definition": ""
+    },
+    {
+      "code": "5130101",
+      "display": "Skumbandasjer",
+      "definition": ""
+    },
+    {
+      "code": "5130102",
+      "display": "Skumbandasjer med silikon",
+      "definition": ""
+    },
+    {
+      "code": "5130103",
+      "display": "Skumbandasjer med sølv",
+      "definition": ""
+    },
+    {
+      "code": "5130104",
+      "display": "Hydrofiberbandasjer",
+      "definition": ""
+    },
+    {
+      "code": "5130105",
+      "display": "Sårkontaktlag og sårkompress",
+      "definition": ""
+    },
+    {
+      "code": "5130107",
+      "display": "Hydrokolloide bandasjer",
+      "definition": ""
+    },
+    {
+      "code": "5130201",
+      "display": "Bandasjefiksering",
+      "definition": ""
+    },
+    {
+      "code": "5130202",
+      "display": "Polstring",
+      "definition": ""
+    },
+    {
+      "code": "5130203",
+      "display": "Fikseringsplagg - trøyer, bukser",
+      "definition": ""
+    },
+    {
+      "code": "5130204",
+      "display": "Fikseringsplagg - hansker, sokker, tube",
+      "definition": ""
+    },
+    {
+      "code": "5130301",
+      "display": "Sårskyllevæske",
+      "definition": ""
+    },
+    {
+      "code": "5130302",
+      "display": "Fuktgivende gel",
+      "definition": ""
+    },
+    {
+      "code": "5130303",
+      "display": "Kompresser",
+      "definition": ""
+    },
+    {
+      "code": "5130304",
+      "display": "Kleberfjerner",
+      "definition": ""
+    },
+    {
+      "code": "5130305",
+      "display": "Annet utstyr til sårskift",
+      "definition": ""
+    },
+    {
+      "code": "5130401",
+      "display": "Kremer, oljer og salver",
+      "definition": ""
+    },
+    {
+      "code": "5130402",
+      "display": "Hudfilm",
+      "definition": ""
+    },
+    {
+      "code": "5130403",
+      "display": "Barrierekrem",
+      "definition": ""
+    },
+    {
+      "code": "5140101",
+      "display": "Sprøyter",
+      "definition": ""
+    },
+    {
+      "code": "5140102",
+      "display": "Perorale sprøyter og tilbehør",
+      "definition": ""
+    },
+    {
+      "code": "5140201",
+      "display": "Kanyler",
+      "definition": ""
+    },
+    {
+      "code": "5140202",
+      "display": "Pennekanyler",
+      "definition": ""
+    },
+    {
+      "code": "5140301",
+      "display": "Annet måle- og administrasjonsutstyr",
+      "definition": ""
+    },
+    {
+      "code": "5150101",
+      "display": "TestGruppe5150101",
+      "definition": "Kodeteksten vil bli oppdatert når koden blir gyldig 1. januar 2026"
+    },
+    {
+      "code": "6010101",
+      "display": "Næringsdrikker",
+      "definition": ""
+    },
+    {
+      "code": "6010201",
+      "display": "Næringsdrikker, barn",
+      "definition": ""
+    },
+    {
+      "code": "6010301",
+      "display": "Næringstilskudd -  pulver, pudding, suppe",
+      "definition": ""
+    },
+    {
+      "code": "6010401",
+      "display": "Sondenæring",
+      "definition": ""
+    },
+    {
+      "code": "6010501",
+      "display": "Sondenæring, barn",
+      "definition": ""
+    },
+    {
+      "code": "6010601",
+      "display": "Spesialløsninger",
+      "definition": ""
+    },
+    {
+      "code": "6010701",
+      "display": "Melkeerstatninger - hydrolysert melkeprotein",
+      "definition": ""
+    },
+    {
+      "code": "6010702",
+      "display": "Melkeerstatninger - frie aminosyrer, andre proteinkilder",
+      "definition": ""
+    },
+    {
+      "code": "6010801",
+      "display": "Næringsmidler - Medfødte stoffskiftesykdommer",
+      "definition": ""
+    },
+    {
+      "code": "6020101",
+      "display": "Næringsdrikker",
+      "definition": ""
+    },
+    {
+      "code": "6020201",
+      "display": "Næringsdrikker, barn",
+      "definition": ""
+    },
+    {
+      "code": "6020401",
+      "display": "Sondenæring",
+      "definition": ""
+    },
+    {
+      "code": "6020601",
+      "display": "Melkeerstatninger - hydrolysert melkeprotein",
+      "definition": ""
+    },
+    {
+      "code": "6020602",
+      "display": "Melkeerstatninger - frie aminosyrer, andre proteinkilder",
+      "definition": ""
+    },
+    {
+      "code": "6030101",
+      "display": "Næringsmidler ved Fenylketonuri (Føllings sykdom)",
+      "definition": ""
+    },
+    {
+      "code": "6040101",
+      "display": "Næringsdrikker",
+      "definition": ""
+    },
+    {
+      "code": "6040201",
+      "display": "Næringsdrikker, barn",
+      "definition": ""
+    },
+    {
+      "code": "6040301",
+      "display": "Næringstilskudd -  pulver, pudding, suppe",
+      "definition": ""
+    },
+    {
+      "code": "6040401",
+      "display": "Sondenæring",
+      "definition": ""
+    },
+    {
+      "code": "6040501",
+      "display": "Sondenæring, barn",
+      "definition": ""
+    },
+    {
+      "code": "6040601",
+      "display": "Spesialløsninger",
+      "definition": ""
+    },
+    {
+      "code": "6040701",
+      "display": "Melkeerstatninger - hydrolysert melkeprotein",
+      "definition": ""
+    },
+    {
+      "code": "6040702",
+      "display": "Melkeerstatninger - frie aminosyrer, andre proteinkilder",
+      "definition": ""
+    },
+    {
+      "code": "6050101",
+      "display": "TestGruppe6050101",
+      "definition": "Kodeteksten vil bli oppdatert når koden blir gyldig 1. desember"
+    },
+    {
+      "code": "9000101",
+      "display": "Amoena",
+      "definition": ""
+    },
+    {
+      "code": "9000102",
+      "display": "Anita",
+      "definition": ""
+    },
+    {
+      "code": "9000104",
+      "display": "Serena",
+      "definition": ""
+    },
+    {
+      "code": "9000105",
+      "display": "Silima",
+      "definition": ""
+    },
+    {
+      "code": "9000106",
+      "display": "Trulife",
+      "definition": ""
+    },
+    {
+      "code": "9000107",
+      "display": "ABC",
+      "definition": ""
+    },
+    {
+      "code": "9000201",
+      "display": "Brystvorter",
+      "definition": ""
+    },
+    {
+      "code": "9000301",
+      "display": "Festeplater",
+      "definition": ""
+    },
+    {
+      "code": "9000401",
+      "display": "Interim/vattprotese",
+      "definition": ""
+    }
+  ]
+}

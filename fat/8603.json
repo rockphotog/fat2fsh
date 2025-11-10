@@ -1,0 +1,64 @@
+{
+  "id": "8603",
+  "name": "Mekanisme ved personskade",
+  "title": "Mekanisme ved personskade",
+  "description": "Kodene angir det som skjedde i selve skadeøyeblikket, den aktivitet, kontakt eller påvirkning som medførte at skaden oppstod.",
+  "version": "1.0.0",
+  "status": "Til utbredelse eller er i bruk",
+  "status_last_changed": "2024-12-09T00:00:00.0000000",
+  "owner": "Avdeling registerkvalitet, Folkehelseinstituttet",
+  "valid_from": "2005-01-11T00:00:00.000",
+  "active": true,
+  "concepts": [
+    {
+      "code": "A",
+      "display": "Annen skademekanisme",
+      "definition": "Inklusiv: forgiftning, etsning, fremmedlegeme, forbrenning av\r\nvarm væske og overflate, elektrisitet, stråling, støy, vibrasjon,\r\nnaturkrefter, giftig dyr/plante"
+    },
+    {
+      "code": "B",
+      "display": "Kutt (ikke fall), bitt (ikke giftig), stikk, skutt",
+      "definition": "Inklusiv: Klippet, skåret, saget, revet, hugget, stukket, annen inntrengning (prosjektil, flis, partikkel). Dyrebitt, klort, insektsstikk.\r\nEksklusiv: bitt, stikk av giftig dyr, plante (A)"
+    },
+    {
+      "code": "C",
+      "display": "Klemt, fanget, knust",
+      "definition": "Klemt i dør, klemt fast eller fanget i noe (f.eks. maskiner), knust, overkjørt."
+    },
+    {
+      "code": "D",
+      "display": "Kvelning, drukning",
+      "definition": "Inklusiv: kvelning pga. luftmangel, blokkering av luftvei, begravd\r\nav snø, jord, korn etc., druknet, nærdruknet."
+    },
+    {
+      "code": "F1",
+      "display": "Fall fra høyde, også i/fra trapp",
+      "definition": "Fall fra høyere til lavere plan. Også fra sykkel/sparkesykkel"
+    },
+    {
+      "code": "F2",
+      "display": "Fall fra egen høyde",
+      "definition": "Inklusiv: fall på bakke, gulv, på ski, skøyter osv.\r\nEksklusiv: vrikke ankel uten fall"
+    },
+    {
+      "code": "G",
+      "display": "Åpen ild, flamme, røyk",
+      "definition": "Eksklusiv: forbrenning av varm væske eller overflate (A)"
+    },
+    {
+      "code": "O",
+      "display": "Akutt overbelastning",
+      "definition": "Akutt overbelastning av kropp/kroppsdel, strekning, vridning\r\npga. egen voldsom bevegelse eller anstrengende stilling.\r\nEksklusiv: Langvarig overbelastning mer enn 48 timer."
+    },
+    {
+      "code": "P",
+      "display": "Sammenstøt, påkjørsel",
+      "definition": "Inklusiv: Slag og støt i/fra kjørende transportmiddel, sammenstøt med personer, dyr, slag, spark av menneske, dyr."
+    },
+    {
+      "code": "U",
+      "display": "Ukjent skademekanisme",
+      "definition": ""
+    }
+  ]
+}

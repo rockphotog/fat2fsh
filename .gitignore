@@ -207,8 +207,6 @@ marimo/_lsp/
 __marimo__/
 
 # Project specific - Generated files should not be committed
-fat/
-fsh/
 test_output/
 sushi_validation/fsh-generated/
 sushi_validation/temp/
