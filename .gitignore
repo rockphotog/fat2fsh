@@ -211,3 +211,4 @@ test_output/
 sushi_validation/fsh-generated/
 sushi_validation/temp/
 artifacts/
+.DS_Store
